@@ -6,11 +6,6 @@ public class Calculator {
   private Scanner console = new Scanner(System.in);
   
   private void addition () {
-    // Steps for function:
-    // Ask user for first number in equation
-    // Ask user for second number in equation
-    // Calculate result
-    // Print result
     try { 
       double[] numbers = getInputs();
       
@@ -19,12 +14,9 @@ public class Calculator {
         result = result + numbers[i];
       }
       
-      // "\n" means a new line break, you can also use System.lineSeparator() but like... don't
-      // https://www.educative.io/answers/how-to-use-the-printf-function-in-java
-      // System.out.println(num1 + " + " + num2 + " = " + result);
       printResult(numbers, result, "+");
     } catch(InputMismatchException e) {
-      console.next(); // prevents from exiting | consumes the next line character (\n)
+      console.next(); 
       System.out.println("Invalid input.");
     }
   }
@@ -106,7 +98,6 @@ public class Calculator {
 
     return inputs;
   }
-
 
   public void run () {
     try {
